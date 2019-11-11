@@ -28,7 +28,7 @@ cities = ["ABAIARA","ACARAPE","ACARAU","ACOPIARA","AIUABA","ALCANTARAS","ALTANEI
 #generating multiple shapefiles based on the extractionbyattribute
 
 for n in cities:
-  limite = "C:\Users\eulimar.tiburcio\Desktop\Plugin QGIS/lim" + n +".shp"
+  limite = "data/lim" + n +".shp"
   processing.runalg('qgis:extractbyattribute', MUNICIPIOS, "NM_MUNICIP", 0, n, limite)
   iface.addVectorLayer(limite, "limite de " + n , "ogr")
 	
